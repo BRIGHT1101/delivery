@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="main.mjs"></script>
+    <script defer src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>배달의만족</title>
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <h1><a href="./index.html">배달의만족</a></h1><image src="https://image.flaticon.com/icons/png/512/2830/2830305.png" height="50px" id="img1"></image><div id="img2"></div>
+        </nav>
+        <div id="sidemenu">
+            <div><img src="https://image.flaticon.com/icons/png/512/64/64572.png" height="25px" id="login"></image></div>
+            <div><img src="https://image.flaticon.com/icons/png/512/1170/1170627.png" height="25px" id="cart"></image></div>
+            </div>
+        <div id="loc">
+            <span id="resetlocation"><img src="https://image.flaticon.com/icons/png/512/484/484167.png" width="25px"> </span>
+            <span id="currentlocation"></span>
+        </div>
+    </header>
+    <main id="main">
+        <ul id="categorylist">
+            <li id="kr">한식</li>
+            <li id="cn">중식</li>
+            <li id="us">양식</li>
+            <li id="jap">일식</li>
+            <li id="night">야식</li>
+            <li id="brunch">브런치</li>
+            <li id="dess">디저트</li>
+            <li id="season">계절음식</li>
+            <li id="bonsik">분식</li>
+        </ul>
+    </main>
+    <div id="locationpopup">
+        <div id="popuptext">어디로 배달할까요?</div>
+        <input type="button" id="searchlocation" value="주소 찾기">
+        <div id="roadAddress"></div>
+        <input type="text" style="text-align:center;" id="detailAddress" placeholder="상세주소 입력">
+        <input type="button" id="completelocation" value="완료">
+    </div>
+</body>
+</html>

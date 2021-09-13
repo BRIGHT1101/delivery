@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+body {
+    font-family: 'Gowun Dodum', sans-serif;
+}
+
+input {
+    font-family: 'Gowun Dodum', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    font-size: xx-large;
+    color: black;
+    margin: 10px 5px;
+
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+#img1 {
+    margin: auto 10px;
+    z-index:-1;
+    animation: delivering 10s infinite;
+}
+
+#img2 {
+    position: absolute;
+    top: 0;
+    z-index: -2;
+    margin-top: 10px;
+    height: 70px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(120,209,227,0.25) 47%, rgba(255,255,255,0) 100%);
+}
+
+@keyframes delivering {
+    0% {
+        transform: translateX(100vw);
+    }
+    40% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: translateX(0vw);
+        
+    }
+    100% {
+        transform: translateX(-100vw) rotate(20deg);
+    }
+}
+
+#sidemenu {
+    display: flex;
+    position:fixed;
+    right: 10px;
+    top: 20px;
+}
+
+#sidemenu div {
+    padding-right: 10px;
+}
+
+#currentlocation {
+    text-align: center;
+    font-size: larger;
+    padding-left: 5px;
+}
+
+#loc {
+    display: flex;
+    text-align: center;
+    margin: 20px;
+    justify-content: center;
+}
+
+
+#locationpopup {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left:50vw;
+    top:50vh;
+    border-radius: 10px;
+    background-color: rgba(226, 224, 224, 0.877);
+    padding: 5vw;
+    width: 70vmin;
+    transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+    justify-content: center;
+    box-shadow: grey 0 0 10px 1px;
+}
+
+#popuptext {
+    width: 100%;
+    font-size:3vmax;
+    margin: 10px;
+}
+
+#roadAddress {
+    padding-top: 50px;
+}
+
+#locationpopup input[type="text"] {
+    background-color: transparent;
+    border : none;
+    margin: 10px 0px;
+    outline: none;
+    
+}
+
+#locationpopup input[type="button"] {
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    width: 50%;
+    margin: auto;
+    background-image: url();
+}
+
+
+
+#completelocation, #detailAddress {
+    display : none;
+}
+
+#categorylist {
+    padding: 0;
+    text-align: center;
+}
+
+#categorylist li {
+    width: 30vmax;
+    height: 30vmax;
+    margin : 5vw;
+    border-radius: 100%;
+    line-height: 30vmax;
+    display: inline-block;
+    font-size: x-large;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 10px rgb(0, 0, 0),-1px -1px 10px rgb(0, 0, 0),1px -1px 10px rgb(0, 0, 0),-1px 1px 10px rgb(0, 0, 0);
+    background-position: center;
+    box-shadow: 0 0 5px 1px grey;
+}
+
+#categorylist li:hover {
+    transform: scale(1.03);
+    transition: 0.2s ease-in-out;
+}
+
+.selectedcategory {
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    background-image: url("https://i.pinimg.com/564x/7b/91/ac/7b91ac656cde1c18e79e02d9fce9b5ed.jpg");
+    background-size: cover;
+}
+
+.selectedcategory li:not(:first-child) {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    margin: 20px auto;
+    font-size: larger;
+    text-shadow: rgb(143, 142, 142) 0 0 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+
+.selectedcategory li:not(:first-child):hover {
+    border: 1px solid rgba(128, 127, 127, 0.507);
+}
+
+.selectedcategory li:first-child{
+    pointer-events: none;
+    color:white;
+    height: 10vh;
+    background-size: cover;
+    background-position: center;
+    line-height: 10vh;
+    text-align: center;
+    border-radius: 10px;
+    font-size: x-large;
+    font-weight: bolder;
+    text-shadow: 1px 1px 10px rgb(0, 0, 0),-1px -1px 10px rgb(0, 0, 0),1px -1px 10px rgb(0, 0, 0),-1px 1px 10px rgb(0, 0, 0);
+} 
+
+#orderpopup {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left:50vw;
+    top:50vh;
+    border-radius: 10px;
+    background-color: rgba(226, 224, 224, 0.877);
+    padding: 5vw;
+    width: 70vmin;
+    transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+    justify-content: center;
+    box-shadow: grey 0 0 10px 1px;
+}
+
+#orderpopup div:first-child {
+    font-size: x-large;
+    font-weight: bolder;
+    margin: 10px;
+}
+
+#price {
+    display: flex;
+    margin: 10px auto;
+}
+
+#price input {
+    border: none;
+    margin: 0 8px;
+    font-weight: bolder;
+    font-size: larger;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#price div {
+    margin: auto 5px;
+    font-size: large;
+}
+
+#close {
+    position: absolute;
+    top:0;
+    right:0;
+    font-weight: bolder;
+    font-size: larger;
+    border:none;
+    background: transparent;
+}
+
+#pricevalue {
+    border-radius: 8px;
+    padding: 10px 0;
+    margin : 10px;
+    background-color: rgba(220, 20, 60, 0.096);
+    border:2px dashed rgba(220, 20, 60, 0.404);
+}
+
+#orderpopup input[value="완료"] {
+    border: none;
+    margin: 25px 0 10px 0;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: large;
+}
+
+#end {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+#endmsg {
+    margin-top: 20vh;
+    text-align: center;
+}
+
+#orderEnd {
+    width: 30vw;
+    animation: fadein 1s;
+}
+
+#orderEnd:hover {
+    transform: rotate(360deg);
+    transition: 1s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    };
+}
