@@ -15,8 +15,8 @@
             <h1><a href="./index.html">배달의만족</a></h1><image src="https://image.flaticon.com/icons/png/512/2830/2830305.png" height="50px" id="img1"></image><div id="img2"></div>
         </nav>
         <div id="sidemenu">
-            <div><img src="https://image.flaticon.com/icons/png/512/64/64572.png" height="25px" id="login"></image></div>
-            <div><img src="https://image.flaticon.com/icons/png/512/1170/1170627.png" height="25px" id="cart"></image></div>
+            <div id="login"><img src="https://image.flaticon.com/icons/png/512/64/64572.png" height="20px" ></image></div>
+            <div id="cart"><img src="https://image.flaticon.com/icons/png/512/1170/1170627.png" height="40px" ></image></div>
             </div>
         <div id="loc">
             <span id="resetlocation"><img src="https://image.flaticon.com/icons/png/512/484/484167.png" width="25px"> </span>
@@ -43,5 +43,37 @@
         <input type="text" style="text-align:center;" id="detailAddress" placeholder="상세주소 입력">
         <input type="button" id="completelocation" value="완료">
     </div>
+    <div id="loginpopup">
+        <input type="button" id="loginX" value="X"></input>
+        <div id="logarea">
+            <input type="text" id="idinput" placeholder="아이디"></input>
+            <input type="password" id="pwinput" val placeholder="비밀번호"></input>
+            <input type="button" id="loginbutton" value="로그인">
+            <div id="regdiv">
+                <label for="regbutton">아이디가 없으시다면?</label>
+                <input type="button" id="regbutton" value="회원가입">
+            </div>
+        </div>
+        <div id="regpopup">
+            <input type="text" id="idinputReg" val placeholder="아이디"></input>
+            <input type="password" id="pwinputReg" val placeholder="비밀번호"></input>
+            <input type="text" id="nicknameinput" val placeholder="닉네임"></input>
+            <input type="button" id="endreg" value="가입신청">
+        </div>
+        <div id="userwelcome">
+            <div id="welcometext"></div>
+            <input type="button" id="deliverylog" value="주문 확인">
+            <input type="button" id="logout" value="로그아웃">
+        </div>
+    </div>
+    <div id="cartpopup">
+        <input type="button" id="cartX" value="X"></input>
+        <div id="cartname">주문 장바구니</div>
+        <div id="cartempty">장바구니가 비어있습니다!</div>
+        <ul id="cartlist"></ul>
+        <div id="totalcost"></div>
+        <input id="ordered" type="button" value="주문하기">
+    </div>
+    <div id="ending">주문이 완료되었습니다.</div>
 </body>
 </html>

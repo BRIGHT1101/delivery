@@ -40,6 +40,19 @@ nav {
     background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(120,209,227,0.25) 47%, rgba(255,255,255,0) 100%);
 }
 
+#login {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+}
+
+#cart {
+    position: fixed;
+    bottom: 5px;
+    right: 10px;
+}
+
+
 @keyframes delivering {
     0% {
         transform: translateX(100vw);
@@ -56,12 +69,6 @@ nav {
     }
 }
 
-#sidemenu {
-    display: flex;
-    position:fixed;
-    right: 10px;
-    top: 20px;
-}
 
 #sidemenu div {
     padding-right: 10px;
@@ -234,7 +241,7 @@ nav {
     font-size: large;
 }
 
-#close {
+#close,#loginX,#cartX {
     position: absolute;
     top:0;
     right:0;
@@ -252,9 +259,9 @@ nav {
     border:2px dashed rgba(220, 20, 60, 0.404);
 }
 
-#orderpopup input[value="완료"] {
+#orderpopup input[value="장바구니에 담기"],#orderpopup input[value="카트에 담기"] {
     border: none;
-    margin: 25px 0 10px 0;
+    margin: 15px 0 0 0;
     background-color: transparent;
     font-weight: bold;
     font-size: large;
@@ -271,7 +278,7 @@ nav {
 }
 
 #orderEnd {
-    width: 30vw;
+    width: 20vw;
     animation: fadein 1s;
 }
 
@@ -286,4 +293,161 @@ nav {
     } to {
         opacity: 1;
     };
+}
+
+#loginpopup {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    left:50vw;
+    top:50vh;
+    border-radius: 10px;
+    background-color: rgba(226, 224, 224, 0.877);
+    padding: 10vw 5vw 5vw 5vw;
+    width: 70vmin;
+    transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+    justify-content: center;
+    box-shadow: grey 0 0 10px 1px;
+}
+
+#loginpopup input[type="text"], #loginpopup input[type="password"]{
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    outline: none;
+}
+
+#loginbutton, #endreg {
+    border-radius: 5px;
+    border: 2px grey dashed;
+    margin: 10px 5px 20px 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#regbutton {
+    border:none;
+    font-weight: bold;
+    font-size: medium;
+    background-color: transparent;
+    margin: auto 5px;
+    cursor: pointer;
+}
+
+#regdiv {
+    margin-top: 10px;
+}
+
+#regpopup {
+    display: none;
+    flex-direction: column;
+}
+
+#logarea {
+    display: flex;
+    flex-direction: column;
+}
+
+#userwelcome {
+    display: none;
+    flex-direction: column;
+}
+
+#welcometext {
+    font-weight: bold;
+    font-size: large;
+    margin-bottom: 20px;
+}
+
+#deliverylog {
+    border-radius: 5px;
+    border: 2px grey dashed;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#logout {
+    border-radius: 5px;
+    border: 2px rgba(255, 0, 0, 0.479) dashed;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#cartpopup {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    left:50vw;
+    top:50vh;
+    border-radius: 10px;
+    background-color: rgba(226, 224, 224, 0.877);
+    padding: 2vw 5vw;
+    width: 70vmin;
+    transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+    justify-content: center;
+    box-shadow: grey 0 0 10px 1px;
+}
+
+#cartempty {
+    margin-top: 30px;
+}
+
+#cartname {
+    font-weight: bolder;
+}
+
+#cartlist {
+    padding: 0;
+}
+
+#cartlist li {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.deletecart {
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+#ending {
+    display : none;
+}
+
+#ordered {
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: grey 0 0 5px 1px;
+    border:none;
+    font-size:medium;
+    padding: 3px 0;
+    cursor: pointer;
+    
+}
+
+#ending{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    left:50vw;
+    top:50vh;
+    border-radius: 10px;
+    background-color: rgba(226, 224, 224, 0.877);
+    padding: 2vw 5vw;
+    width: 70vmin;
+    transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+    justify-content: center;
+    box-shadow: grey 0 0 10px 1px;
+    font-weight: bolder;
 }
